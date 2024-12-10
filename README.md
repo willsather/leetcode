@@ -10,3 +10,4 @@ A collection of Leetcode solutions solved using Java.
 | Difficulty | Problem        | Solution Link                                                        |
 |------------|----------------|----------------------------------------------------------------------|
 | Easy       | High Five      | [Solution](src/main/java/com/willsather/leetcode/HighFive.java)      |
+| Hard       | Trapping Water | [Solution](src/main/java/com/willsather/leetcode/TrappingWater.java) |

@@ -3,7 +3,7 @@ package com.willsather.leetcode;
 import java.util.*;
 
 public class HighFive {
-    public static int[][] highFive(int[][] items) {
+    public static int[][] solution(int[][] items) {
         Map<Integer, PriorityQueue<Integer>> map = new HashMap<>();
 
         for (int[] item : items) {

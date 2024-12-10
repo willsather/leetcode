@@ -16,7 +16,8 @@ class HighFiveTest {
                 {1, 87}, {2, 88}
         };
 
-        assertThat(expected).isEqualTo(HighFive.highFive(input));
+
+        assertThat(HighFive.solution(input)).isEqualTo(expected);
     }
 
     @Test
@@ -27,7 +28,8 @@ class HighFiveTest {
         int[][] expected = {
                 {1, 50}
         };
-        assertThat(expected).isEqualTo(HighFive.highFive(input));
+
+        assertThat(HighFive.solution(input)).isEqualTo(expected);
     }
 
     @Test
@@ -38,7 +40,8 @@ class HighFiveTest {
         int[][] expected = {
                 {1, 70} // Top 5: 90, 80, 70, 60, 50; Average: (90+80+70+60+50) / 5 = 70
         };
-        assertThat(expected).isEqualTo(HighFive.highFive(input));
+
+        assertThat(HighFive.solution(input)).isEqualTo(expected);
     }
 
     @Test
@@ -51,7 +54,8 @@ class HighFiveTest {
                 {1, 30}, // Top 5: 50, 40, 30, 20, 10; Average: 30
                 {2, 80}  // Top 5: 100, 90, 80, 70, 60; Average: 80
         };
-        assertThat(expected).isEqualTo(HighFive.highFive(input));
+
+        assertThat(HighFive.solution(input)).isEqualTo(expected);
     }
 
     @Test
@@ -64,7 +68,8 @@ class HighFiveTest {
                 {1, 50}, // Top 5: 70, 60, 50, 40, 30; Average: 50
                 {2, 110} // Top 5: 130, 120, 110, 100, 90; Average: 110
         };
-        assertThat(expected).isEqualTo(HighFive.highFive(input));
+
+        assertThat(HighFive.solution(input)).isEqualTo(expected);
     }
 
     @Test
@@ -72,7 +77,8 @@ class HighFiveTest {
         int[][] input = {};
         int[][] expected = {};
 
-        assertThat(expected).isEqualTo(HighFive.highFive(input));
+
+        assertThat(HighFive.solution(input)).isEqualTo(expected);
     }
 
     @Test
@@ -84,6 +90,7 @@ class HighFiveTest {
                 {1, 30} // Top scores: 40, 30, 20; Average: (40+30+20) / 3 = 30
         };
 
-        assertThat(expected).isEqualTo(HighFive.highFive(input));
+
+        assertThat(HighFive.solution(input)).isEqualTo(expected);
     }
 }
