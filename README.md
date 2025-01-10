@@ -14,6 +14,7 @@ A collection of Leetcode solutions solved using Java.
 | Hard       | Trapping Water   | [Problem](https://leetcode.com/problems/trapping-rain-water/description/)     | [Solution](src/main/java/com/willsather/leetcode/TrappingWater.java)  |         
 | Medium     | Game of Life     | [Problem](https://leetcode.com/problems/game-of-life/description/)            | [Solution](src/main/java/com/willsather/leetcode/GameOfLife.java)     |
 | Medium     | Is Robot Bounded | [Problem](https://leetcode.com/problems/robot-bounded-in-circle/description/) | [Solution](src/main/java/com/willsather/leetcode/IsRobotBounded.java) |
+| Medium     | LRU Cache        | [Problem](https://leetcode.com/problems/lru-cache/)                           | [Solution](src/main/java/com/willsather/leetcode/LRUCache.java)       |
 
 ## Resource
 
