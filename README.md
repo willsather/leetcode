@@ -7,7 +7,25 @@ A collection of Leetcode solutions solved using Java.
 - `src/test/java` contains unit tests for each solution.
 
 ## Solved Problems
-| Difficulty | Problem        | Solution Link                                                        |
-|------------|----------------|----------------------------------------------------------------------|
-| Easy       | High Five      | [Solution](src/main/java/com/willsather/leetcode/HighFive.java)      |
-| Hard       | Trapping Water | [Solution](src/main/java/com/willsather/leetcode/TrappingWater.java) |
+
+| Difficulty | Problem          | LeetCode                                                                      | Solution Link                                                         |
+|------------|------------------|:------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| Easy       | High Five        | [Problem](https://leetcode.com/problems/robot-bounded-in-circle/description/) | [Solution](src/main/java/com/willsather/leetcode/HighFive.java)       |
+| Hard       | Trapping Water   | [Problem](https://leetcode.com/problems/trapping-rain-water/description/)     | [Solution](src/main/java/com/willsather/leetcode/TrappingWater.java)  |         
+| Medium     | Game of Life     | [Problem](https://leetcode.com/problems/game-of-life/description/)            | [Solution](src/main/java/com/willsather/leetcode/GameOfLife.java)     |
+| Medium     | Is Robot Bounded | [Problem](https://leetcode.com/problems/robot-bounded-in-circle/description/) | [Solution](src/main/java/com/willsather/leetcode/IsRobotBounded.java) |
+
+## Resource
+
+Here are a collection of some useful resources to help pick problems.
+
+[Company Wise Problems](https://github.com/hxu296/leetcode-company-wise-problems-2022)
+
+[Company Wise Problems #2](https://github.com/krishnadey30/LeetCode-Questions-CompanyWise)
+
+[Grind 75](https://www.techinterviewhandbook.org/grind75/)
+
+[LeetRacer](https://leetracer.com/screener)
+
+[NeetCode](https://neetcode.io/practice)
+
