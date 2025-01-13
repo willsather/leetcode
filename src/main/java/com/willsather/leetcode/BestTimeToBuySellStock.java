@@ -1,7 +1,7 @@
 package com.willsather.leetcode;
 
-class BestTimeToBuySellStock {
-    public int solution(int[] prices) {
+public class BestTimeToBuySellStock {
+    public static int solution(int[] prices) {
         int buyPrice = prices[0];
         int profit = 0;
 

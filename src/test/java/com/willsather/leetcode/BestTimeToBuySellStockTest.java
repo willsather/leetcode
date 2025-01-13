@@ -5,80 +5,78 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class BestTimeToBuySellStockTest {
 
-    private final BestTimeToBuySellStock stockCalculator = new BestTimeToBuySellStock();
-
     @Test
-    void testExampleCase() {
+    public void testExampleCase() {
         int[] prices = {7, 1, 5, 3, 6, 4};
 
         // Buy at 1, sell at 6
-        assertThat(stockCalculator.solution(prices)).isEqualTo(5);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(5);
     }
 
     @Test
-    void testNoProfit() {
+    public void testNoProfit() {
         int[] prices = {7, 6, 4, 3, 1};
 
         // No profit can be made
-        assertThat(stockCalculator.solution(prices)).isEqualTo(0);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(0);
     }
 
     @Test
-    void testIncreasingPrices() {
+    public void testIncreasingPrices() {
         int[] prices = {1, 2, 3, 4, 5};
 
         // Buy at 1, sell at 5
-        assertThat(stockCalculator.solution(prices)).isEqualTo(4);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(4);
     }
 
     @Test
-    void testSingleDay() {
+    public void testSingleDay() {
         int[] prices = {5};
 
         // Only one price, no transaction possible
-        assertThat(stockCalculator.solution(prices)).isEqualTo(0);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(0);
     }
 
     @Test
-    void testTwoDaysProfit() {
+    public void testTwoDaysProfit() {
         int[] prices = {1, 5};
 
         // Buy at 1, sell at 5
-        assertThat(stockCalculator.solution(prices)).isEqualTo(4);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(4);
     }
 
     @Test
-    void testTwoDaysNoProfit() {
+    public void testTwoDaysNoProfit() {
         int[] prices = {5, 1};
 
         // Prices decrease, no profit
-        assertThat(stockCalculator.solution(prices)).isEqualTo(0);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(0);
     }
 
     @Test
-    void testRandomCase() {
+    public void testRandomCase() {
         int[] prices = {3, 8, 1, 7, 4, 9};
 
         // Buy at 1, sell at 9
-        assertThat(stockCalculator.solution(prices)).isEqualTo(8);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(8);
     }
 
     @Test
-    void testLargeInput() {
+    public void testLargeInput() {
         int[] prices = new int[100000];
         for (int i = 0; i < prices.length; i++) {
             prices[i] = i + 1;
         }
 
         // Buy at 1, sell at 100000
-        assertThat(stockCalculator.solution(prices)).isEqualTo(99999);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(99999);
     }
 
     @Test
-    void testEdgeCaseMinimumInput() {
+    public void testEdgeCaseMinimumInput() {
         int[] prices = {1, 2};
 
         // Buy at 1, sell at 2
-        assertThat(stockCalculator.solution(prices)).isEqualTo(1);
+        assertThat(BestTimeToBuySellStock.solution(prices)).isEqualTo(1);
     }
 }
