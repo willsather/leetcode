@@ -51,24 +51,6 @@ class DoublyLinkedList {
 
         return lastNode;
     }
-
-//    @Override
-//    public String toString() {
-//        StringBuilder sb = new StringBuilder();
-//        sb.append("[");
-//
-//        Node current = head.next; // Skip dummy head
-//        while (current != tail) { // Stop before dummy tail
-//            sb.append("(").append(current.key).append(", ").append(current.value).append(")");
-//            if (current.next != tail) {
-//                sb.append(" <-> "); // Use arrow to indicate links
-//            }
-//            current = current.next;
-//        }
-//
-//        sb.append("]");
-//        return sb.toString();
-//    }
 }
 
 class LRUCache {
