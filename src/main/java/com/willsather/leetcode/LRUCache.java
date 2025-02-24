@@ -1,67 +1,27 @@
 package com.willsather.leetcode;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
-class Node {
-    Node next;
-    Node prev;
+public class LRUCache {
+    private static class Node {
+        int key;
+        int value;
 
-    int key;
-    int value;
-
-    public Node(int key, int value) {
-        this.key = key;
-        this.value = value;
-    }
-}
-
-class DoublyLinkedList {
-    Node head;
-    Node tail;
-
-    public DoublyLinkedList() {
-        this.head = new Node(0, 0); // dummy head
-        this.tail = new Node(0, 0); // dummy tail
-
-        this.head.next = this.tail;
-        this.tail.prev = this.head;
-    }
-
-    public void addToFront(Node node) {
-        node.next = this.head.next;
-        node.prev = this.head;
-
-        this.head.next.prev = node;
-        this.head.next = node;
-    }
-
-    public void remove(Node node) {
-        node.prev.next = node.next;
-        node.next.prev = node.prev;
-    }
-
-    public Node removeLast() {
-        // list is empty
-        if (tail.prev == head) {
-            return null;
+        public Node(int key, int value) {
+            this.key = key;
+            this.value = value;
         }
-
-        Node lastNode = tail.prev;
-        remove(lastNode);
-
-        return lastNode;
     }
-}
 
-class LRUCache {
     int capacity;                   // maintain allowed capacity
     HashMap<Integer, Node> map;     // maintain fast key/value lookup
-    DoublyLinkedList list;          // maintain order
+    LinkedList<Node> list;          // maintain order
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
         this.map = new HashMap<>();
-        this.list = new DoublyLinkedList();
+        this.list = new LinkedList<>();
     }
 
     public int get(int key) {
@@ -71,7 +31,7 @@ class LRUCache {
 
         Node current = this.map.get(key);
         this.list.remove(current);
-        this.list.addToFront(current);
+        this.list.addFirst(current);
 
         return current.value;
     }
@@ -83,12 +43,12 @@ class LRUCache {
             node.value = value;
 
             this.list.remove(node);
-            this.list.addToFront(node);
+            this.list.addFirst(node);
 
         // if not present, add to front
         } else {
             Node newNode = new Node(key, value);
-            this.list.addToFront(newNode);
+            this.list.addFirst(newNode);
             this.map.put(key, newNode);
 
             // if over capacity, delete last
