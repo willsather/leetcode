@@ -36,29 +36,4 @@ public class TrappingWater {
 
         return water;
     }
-
-//    public int trappingWater(int[] height) {
-//        int total = 0;
-//
-//        for (int i = 0; i < height.length; i++) {
-//            int leftMax = 0;
-//            int rightMax = 0;
-//
-//            // find max on left of index
-//            for (int j = 0; j <= i; j++) {
-//                leftMax = Math.max(leftMax, height[j]);
-//            }
-//
-//            // find max on right of index
-//            for (int k = i; k < height.length; k++) {
-//                rightMax = Math.max(rightMax, height[k]);
-//            }
-//
-//
-//            total += Math.max(0, Math.min(leftMax, rightMax) - height[i]);
-//
-//        }
-//
-//        return total;
-//    }
 }
