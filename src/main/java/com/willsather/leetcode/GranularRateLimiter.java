@@ -20,12 +20,8 @@ public class GranularRateLimiter {
     }
 
     private boolean isLimitExceeded(String key, Integer limit, Long timestamp) {
-        Queue<Long> queue = this.queues.get(key);
-
-        // in case it's not created, create
-        if (queue == null) {
-            this.queues.put(key, queue = new LinkedList<>());
-        }
+        // get rate limit queue ... in case it's not created, create linked list
+        Queue<Long> queue = this.queues.computeIfAbsent(key, k -> new LinkedList<>());
 
         // remove outdated times (old, previous requests)
         while (!queue.isEmpty() && queue.peek() < timestamp - TIME_WINDOW) {
